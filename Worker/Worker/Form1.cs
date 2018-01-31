@@ -18,12 +18,12 @@ namespace Worker
         {
             InitializeComponent();
             Worker[] workers = new Worker[4];
-            workers[0] = new Worker(new string[] { "Nectar Collector", "Honey Manufacturing" });
-            workers[1] = new Worker(new string[] { "Egg Care", "Haby Bee Tutoring" });
-            workers[2] = new Worker(new string[] { "Hive Maintenance", "Sting Patrol" });
+            workers[0] = new Worker(new string[] { "Nectar Collector", "Honey Manufacturing" }, 175);
+            workers[1] = new Worker(new string[] { "Egg Care", "Haby Bee Tutoring" }, 114);
+            workers[2] = new Worker(new string[] { "Hive Maintenance", "Sting Patrol" }, 149);
             workers[3] = new Worker(new string[] { "Egg Care", "Haby Bee Tutoring", "Hive Maintenance",
-                "Nectar Collector", "Honey Manufacturing","Sting Patrol" });
-            queen = new Queen(workers);
+                "Nectar Collector", "Honey Manufacturing","Sting Patrol" }, 155);
+            queen = new Queen(workers, 275);
         }
 
         private void assignJob_Click(object sender, EventArgs e)

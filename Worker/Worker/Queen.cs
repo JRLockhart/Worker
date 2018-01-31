@@ -9,7 +9,8 @@ namespace Worker
     class Queen : Bee
     {
 
-        public Queen(Worker[] workers)
+        public Queen(Worker[] workers, double weightMg)
+            : base(weightMg)
         {
             this.workers = workers;
         }
@@ -31,10 +32,14 @@ namespace Worker
 
         public string WorkTheNextShift()
         {
+            double honeyConsumed = HoneyConsumptionRate();
+
             shiftNumber++;
             string report = "Report for shift #" + shiftNumber + "\r\n";
             for (int i = 0; i < workers.Length; i++)
             {
+                honeyConsumed += workers[i].HoneyConsumptionRate();
+
                 if (workers[i].DidYouFinish())
                     report += "Worker #" + (i + 1) + " finished the job \r\n";
                 if (String.IsNullOrEmpty(workers[i].CurrentJob))
@@ -47,6 +52,7 @@ namespace Worker
                         report += "Worker #" + (i + 1) + " will be done with '" + workers[i].CurrentJob +
                             "' after this shift\r\n";
             }
+            report += "Total honey consumed for the shift: " + honeyConsumed + " units\r\n";
             return report;
         }
     }
