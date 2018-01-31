@@ -33,7 +33,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.shifts = new System.Windows.Forms.NumericUpDown();
             this.nextShift = new System.Windows.Forms.Button();
-            this.assignButton = new System.Windows.Forms.Button();
+            this.assignJob = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.report = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.shifts)).BeginInit();
@@ -90,20 +90,22 @@
             this.nextShift.TabIndex = 5;
             this.nextShift.Text = "Work the next shift";
             this.nextShift.UseVisualStyleBackColor = true;
+            this.nextShift.Click += new System.EventHandler(this.nextShift_Click);
             // 
-            // assignButton
+            // assignJob
             // 
-            this.assignButton.Location = new System.Drawing.Point(18, 74);
-            this.assignButton.Name = "assignButton";
-            this.assignButton.Size = new System.Drawing.Size(234, 23);
-            this.assignButton.TabIndex = 6;
-            this.assignButton.Text = "Assign this job to a bee";
-            this.assignButton.UseVisualStyleBackColor = true;
+            this.assignJob.Location = new System.Drawing.Point(18, 74);
+            this.assignJob.Name = "assignJob";
+            this.assignJob.Size = new System.Drawing.Size(234, 23);
+            this.assignJob.TabIndex = 6;
+            this.assignJob.Text = "Assign this job to a bee";
+            this.assignJob.UseVisualStyleBackColor = true;
+            this.assignJob.Click += new System.EventHandler(this.assignJob_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.workerBeeJob);
-            this.groupBox1.Controls.Add(this.assignButton);
+            this.groupBox1.Controls.Add(this.assignJob);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.shifts);
             this.groupBox1.Controls.Add(this.label2);
@@ -148,7 +150,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown shifts;
         private System.Windows.Forms.Button nextShift;
-        private System.Windows.Forms.Button assignButton;
+        private System.Windows.Forms.Button assignJob;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox report;
     }
