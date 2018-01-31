@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Worker
 {
-    class Worker
+    class Worker : Bee
     {
 
         public Worker(string[] jobsICanDo)

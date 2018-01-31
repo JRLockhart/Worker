@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Worker
 {
-    class Queen
+    class Queen : Bee
     {
 
         public Queen(Worker[] workers)
