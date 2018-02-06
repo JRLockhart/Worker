@@ -11,6 +11,6 @@ namespace Worker
         public int Nectar { get; set; }
         public void FindFlowers() { }
         public void GatherNectar() { }
-        public void ReturnToHive() { }
+        public void ReturnToHive() { } 
     }
 }
